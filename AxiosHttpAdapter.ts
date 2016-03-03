@@ -33,12 +33,12 @@ export default class AxiosHttpAdapter implements IHttpRequestAdapter
 			throw new ArgumentNullException('_axios');
 	}
 
-	static create(param:string|axios.InstanceOptions)
+	static create(param:string|axios.InstanceOptions):AxiosHttpAdapter
 	{
-		return axios.create(
+		return new AxiosHttpAdapter(axios.create(
 			typeof param=='string'
 				? {baseURL: <string>param}
-				: <axios.InstanceOptions>param);
+				: <axios.InstanceOptions>param));
 	}
 
 	request<TResult>(params:IHttpRequestParams):IPromise<TResult>

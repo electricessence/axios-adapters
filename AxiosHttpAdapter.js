@@ -34,9 +34,9 @@ var __extends = (this && this.__extends) || function (d, b) {
                 throw new ArgumentNullException_1.default('_axios');
         }
         AxiosHttpAdapter.create = function (param) {
-            return axios.create(typeof param == 'string'
+            return new AxiosHttpAdapter(axios.create(typeof param == 'string'
                 ? { baseURL: param }
-                : param);
+                : param));
         };
         AxiosHttpAdapter.prototype.request = function (params) {
             return this
