@@ -1,10 +1,11 @@
-///<reference path="bower_components/typescript-dotnet/source/System/Net/Http/IHttpRequestAdapter.d.ts"/>
-///<reference path="bower_components/axios/axios.d.ts"/>
+///<reference path="node_modules/axios/axios.d.ts"/>
 
-import * as axios from 'axios';
-import Uri from './bower_components/typescript-dotnet/source/System/Uri/Uri';
-import ArgumentNullException from './bower_components/typescript-dotnet/source/System/Exceptions/ArgumentNullException';
-import Exception from './bower_components/typescript-dotnet/source/System/Exception';
+import * as axios from "axios";
+import Uri from 'typescript-dotnet/dist/umd.min/System/Uri/Uri';
+import ArgumentNullException from 'typescript-dotnet/dist/umd.min/System/Exceptions/ArgumentNullException';
+import Exception from 'typescript-dotnet/dist/umd.min/System/Exception';
+import {IHttpRequestAdapter} from "typescript-dotnet/dist/umd.min/System/Net/Http/IHttpRequestAdapter";
+import {IHttpRequestParams} from "typescript-dotnet/dist/umd.min/System/Net/Http/IHttpRequestParams";
 
 const EXCEPTION_NAME:string = 'AxiosRequestException';
 
@@ -28,7 +29,7 @@ export default class AxiosHttpAdapter implements IHttpRequestAdapter
 			throw new ArgumentNullException('instance');
 	}
 
-	request<TResult>(params:IHttpRequestParams):IPromise<TResult>
+	request<TResult>(params:IHttpRequestParams):PromiseLike<TResult>
 	{
 		return this
 			._axios.request(coerceParams(params))
