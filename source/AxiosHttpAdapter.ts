@@ -1,3 +1,5 @@
+///<reference path="../node_modules/axios/axios"/>
+
 import * as axios from "axios";
 import Uri from 'typescript-dotnet-umd/System/Uri/Uri';
 import ArgumentNullException from 'typescript-dotnet-umd/System/Exceptions/ArgumentNullException';
