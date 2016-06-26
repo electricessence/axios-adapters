@@ -1,4 +1,3 @@
-///<reference path="node_modules/axios/axios.d.ts"/>
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -42,8 +41,7 @@ var __extends = (this && this.__extends) || function (d, b) {
         };
         return AxiosHttpAdapter;
     }());
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.default = AxiosHttpAdapter;
+    exports.AxiosHttpAdapter = AxiosHttpAdapter;
     function coerceParams(params) {
         var uri = Uri_1.default.from(params.uri);
         return {
@@ -53,5 +51,7 @@ var __extends = (this && this.__extends) || function (d, b) {
             data: params.data
         };
     }
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = AxiosHttpAdapter;
 });
 //# sourceMappingURL=AxiosHttpAdapter.js.map

@@ -1,5 +1,3 @@
-///<reference path="node_modules/axios/axios.d.ts"/>
-
 import * as axios from "axios";
 import Uri from 'typescript-dotnet-umd/System/Uri/Uri';
 import ArgumentNullException from 'typescript-dotnet-umd/System/Exceptions/ArgumentNullException';
@@ -20,7 +18,7 @@ class AxiosRequestException extends Exception {
 
 }
 
-export default class AxiosHttpAdapter implements IHttpRequestAdapter
+export class AxiosHttpAdapter implements IHttpRequestAdapter
 {
 
 	constructor(private _axios:axios.AxiosInstance)
@@ -50,4 +48,6 @@ function coerceParams(params:IHttpRequestParams):axios.RequestOptions {
 		data:params.data
 	}
 }
+
+export default AxiosHttpAdapter;
 

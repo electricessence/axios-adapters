@@ -1,14 +1,17 @@
 {
   "name": "axios-http-adapter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is an adapter for unifiying an interface for http.",
-  "main": "AxiosHttpAdapter.js",
+  "main": "./dist/AxiosHttpAdapter.js",
+  "typings": [
+    "./dist/AxiosHttpAdapter.d.ts"
+  ],
   "dependencies": {
-    "axios": "^0.11.1",
+    "axios": "^0.12.0",
     "typescript-dotnet-umd": "^3.2.0"
   },
-  "devDependencies": {
-    "typescript": "^1.8.2"
+  "optionalDependencies": {
+    "typescript": "^1.8.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
