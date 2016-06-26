@@ -9,13 +9,13 @@ var __extends = (this && this.__extends) || function (d, b) {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
     else if (typeof define === 'function' && define.amd) {
-        define(["require", "exports", 'typescript-dotnet/dist/umd.min/System/Uri/Uri', 'typescript-dotnet/dist/umd.min/System/Exceptions/ArgumentNullException', 'typescript-dotnet/dist/umd.min/System/Exception'], factory);
+        define(["require", "exports", 'typescript-dotnet-umd/System/Uri/Uri', 'typescript-dotnet-umd/System/Exceptions/ArgumentNullException', 'typescript-dotnet-umd/System/Exception'], factory);
     }
 })(function (require, exports) {
     "use strict";
-    var Uri_1 = require('typescript-dotnet/dist/umd.min/System/Uri/Uri');
-    var ArgumentNullException_1 = require('typescript-dotnet/dist/umd.min/System/Exceptions/ArgumentNullException');
-    var Exception_1 = require('typescript-dotnet/dist/umd.min/System/Exception');
+    var Uri_1 = require('typescript-dotnet-umd/System/Uri/Uri');
+    var ArgumentNullException_1 = require('typescript-dotnet-umd/System/Exceptions/ArgumentNullException');
+    var Exception_1 = require('typescript-dotnet-umd/System/Exception');
     var EXCEPTION_NAME = 'AxiosRequestException';
     var AxiosRequestException = (function (_super) {
         __extends(AxiosRequestException, _super);
